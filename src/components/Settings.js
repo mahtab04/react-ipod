@@ -1,5 +1,5 @@
 
-function Settings(props) {
+const Settings = (props) => {
   return (
     <div id="settings">
       <div>
@@ -10,4 +10,3 @@ function Settings(props) {
 }
 
 export default Settings;
-  
