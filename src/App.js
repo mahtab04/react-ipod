@@ -18,10 +18,10 @@ class App extends React.Component{
     }
   }
 
-  // Handle the rotate event fired from the control component
+  // Function to handle rotation of wheel
   rotateEvent = () => {
 
-    // Event listener to capture rotation around wheel
+    // Create a new region
       const myRegion = new ZingTouch.Region(document.getElementById('controls'));
       const rotateArea = document.getElementById('wheel');
       
@@ -32,11 +32,11 @@ class App extends React.Component{
         // If rotated in clockwise direction
         if(distanceFromLast > 1){
           for(let i = 1; i < menuLists.length; i++){
-            // If list contains active class then remove it and add it to the next list
+            // If list contains active class then remove
             if(menuLists[i].classList.contains('active') === true){
               menuLists[i].classList.remove('active');
               
-              // Before adding check whether it's the last item/list
+              //  Before adding check whether it's the last item/list
               if(i === menuLists.length-1){
                 menuLists[1].classList.add('active');
               }else{
@@ -45,10 +45,10 @@ class App extends React.Component{
             }
           }
         }
-        // else if rotated in anti-clockwise direction
+        // If rotated in anti-clockwise direction
         else if(distanceFromLast < -1){
           for(let i = menuLists.length-1; i > 0; i--){
-            // If list contains active class then remove it and add it to the next list
+            // If list contains active class then remove
             if(menuLists[i].classList.contains('active') === true){
               menuLists[i].classList.remove('active');
 
@@ -65,7 +65,7 @@ class App extends React.Component{
   }
   
 
-  // If ok button is clicked, mark the component screen which is selected as true and open the selected component
+  // Function to handle click event
   handleOk = () => {
     const activeMenu = document.querySelector('#side-menu .active');
     const activeItemInMusic = document.querySelector('#music-menu .active');
@@ -75,15 +75,15 @@ class App extends React.Component{
       const optionSelected = activeMenu.getAttribute('data-option');
 
       const display = this.state.display;
-      // Mark all the display as false
-      for(let key in display){  // Note here 'in' and not 'of'
+      // 
+      for(let key in display){  
         display[key] = false;
       }
 
-      // Then mark true to the option selected
+      
       display[optionSelected] = true;
 
-      // Set state to render the components to open the relevant component
+     
       this.setState({
         display: display,
         activeItemInMenu: optionSelected
@@ -99,10 +99,10 @@ class App extends React.Component{
     }
   }
 
-  // If menu button is clicked, go back
+  // Function to handle click event
   handleMenuClick = () => {
 
-    // If component of SideMene was opened, then go back to SideMenu
+    // If component of MusicMene was opened, then go back to MusicMenu
     if(this.state.toShowInMusicComponent === 'musicMenu'){
       const display = this.state.display;
       // Mark all the display as false
@@ -118,8 +118,8 @@ class App extends React.Component{
         activeItemInMusic: 'allSongs'
       });
     }
-    // If component of MusicMene was opened, then go back to MusicMenu
-    else{ // Means toShowInMusicComponent != 'musicMenu'. Set it 'musicMenu'
+    
+    else{ 
       const optionSelected = this.state.toShowInMusicComponent;
       this.setState({ 
         toShowInMusicComponent: 'musicMenu',

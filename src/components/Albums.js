@@ -1,9 +1,9 @@
 import albumsPic from './images/albums.png'
 
-function Albums(props) {
+const Albums = (props) => {
   return (
     <div>
-        <img style={style} src={albumsPic} alt="albumPic"></img>
+      <img style={style} src={albumsPic} alt="albumPic"></img>
     </div>
   );
 }

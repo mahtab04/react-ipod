@@ -1,9 +1,7 @@
-
-
-function Coverflow(props) {
+const Coverflow=(props)=> {
     return (
       <div id="coverflow">
-          <p>CoverFlow</p>
+          <p style={style}>CoverFlow</p>
       </div>
     );
   }
@@ -11,6 +9,12 @@ function Coverflow(props) {
   export default Coverflow;
   
 const style = {
+  color: "red",
+  fontSize: "20px",
+  fontWeight: "bold",
+  textAlign: "center",
+  margin: "0px",
+  padding: "0px",
   
-    
-  }
+ 
+}

@@ -1,4 +1,4 @@
-/* Controls Component */
+
 #controls{
     background-color: rgb(158, 153, 153);
     width: 215px;
@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 #ok-button{
-  background-color: rgb(130, 160, 82);
+  background-color: gray;
   width: 37%;
   height: 37%;
   border-radius: 50%;

@@ -2,14 +2,10 @@
 #screen{
     width: 215px;
     height: 200px;
-    /* 
-     */
      background-color: antiquewhite;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    border: 3px solid black;
-    /* box-sizing: border-box; */
     border-radius: 7px 7px 0px 0px;
     box-shadow: 0px 0px 6px 2px rgb(197 208 216);
   }

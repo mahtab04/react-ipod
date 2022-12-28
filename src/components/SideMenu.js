@@ -4,10 +4,10 @@ import React, { useEffect } from 'react';
 function SideMenu(props) {
     const activeItemInMenu = props.activeItemInMenu;
 
-    // Similar to componemtDidMount and componentDidUpdate of a class
+   
     useEffect(() => {
         
-      // Add active class to a particular option
+    
       const menuItems = document.querySelectorAll('#side-menu tr');
       for(let item of menuItems){
           if(item.getAttribute('data-option') === activeItemInMenu){
@@ -21,7 +21,7 @@ function SideMenu(props) {
     <table id="side-menu">
         <tbody>
         <tr>
-            <th className="table-heading">iPod <i className="fas fa-home"></i></th>
+            <th className="table-heading">iPod.js</th>
         </tr>
         <tr data-option="coverflow">
             <td className="table-item">Coverflow<i className="fas fa-chevron-right"></i></td> 
